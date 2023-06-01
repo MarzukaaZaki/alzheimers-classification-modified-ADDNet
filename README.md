@@ -47,6 +47,21 @@ Here is a visualization with input shapes of the modified ADD-Net:
 | Precision| 98.82% |
 | Recall| 98.67% |
 
+### Modified ADD-Net with SMOTEENN
+| Performance Metric | Obtained Result |
+| -------------- | -------------- | 
+| Accuracy | 98.86%|
+| AUC | 99.54% |
+| F1-Score| 98.87% |
+| Precision| 98.86% |
+| Recall| 98.86% |
+
+### Modified ADD-Net with BorderlineSMOTE
+| Performance Metric | Obtained Result |
+| -------------- | -------------- | 
+| Accuracy | 98.0%|
+
+
 # Tools Used
 
 ## Language
