@@ -2,6 +2,13 @@
 This repository contains a Jupyter Notebook presenting a modified version of the ADD-Net architecture for Alzheimer's disease classification. 
 
 
+# Table of Contents
+- [Paper](#paper)
+- [Dataset](#dataset)
+- [Modifications Made to the Original ADD-Net](#modifications-made-to-the-original-add-net)
+- [Tools Used](#tools-used)
+
+
 # Paper
 The ADD-Net architecture is based on the research outlined in thea following paper:
 
@@ -21,12 +28,24 @@ To reproduce the results and evaluate the performance of the modified ADD-Net ar
 To solve class imbalance, so far I have used the techniques: SMOTEENN, SMOTETomek, BorderlineSMOTE, ADASYN and observed differences in their results.   
 
 ## Adding Another Path to the Model
-The original ADD-Net used filters of size 5x5 in its convolution blocks. Filters of this size are useful for extracting local features, but not the global ones. So in this modified version of the architecture, filters of size 12 x 12 are used along with that of size 5 x 5. To do so, another path parallel to the convolution blocks is created. This path has the same set of layers and hyperparameters except the filter size, which is 12x12. There are 4 convolution blocks, that are followed by a dropout layer and a flatten layer, similar to the ADD-Net. After the flatten layer, the output from the two branches is merged and fed to the fully connected layers.
+- The original ADD-Net used filters of size 5x5 in its convolution blocks. Filters of this size are useful for extracting local features, but not the global ones. So in this modified version of the architecture, filters of size 12 x 12 are used along with that of size 5 x 5. 
+- To do so, another path parallel to the convolution blocks is created. 
+- This path has the same set of layers and hyperparameters except the filter size, which is 12x12. There are 4 convolution blocks, that is followed by a dropout layer similar to the ADD-Net. After the flatten layer, the output from the two branches is merged and fed to the flatten layer and thereafter, the fully connected layers.
 
 Here is a visualization with input shapes of the modified ADD-Net:
 
 ![shared_input_layer](https://github.com/MarzukaaZaki/alzheimers-classification-ADDNet/assets/87608582/504894f5-3e8e-4105-9267-90ebcb60150c)
 
+
+## Evaluating Performance
+### Modified ADD-Net with ADASYN
+| Performance Metric | Obtained Result |
+| -------------- | -------------- | 
+| Accuracy | 98.8%|
+| AUC | 99.84% |
+| F1-Score| 98.73% |
+| Precision| 98.82% |
+| Recall| 98.67% |
 
 # Tools Used
 
