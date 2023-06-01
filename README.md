@@ -38,6 +38,17 @@ Here is a visualization with input shapes of the modified ADD-Net:
 
 
 ## Evaluating Performance
+Accuracy of the original ADD-Net is 98.6%.
+### Modified ADD-Net with SMOTE
+| Performance Metric | Obtained Result |
+| -------------- | -------------- | 
+| Accuracy | 98.48%|
+| AUC | 99.82% |
+| F1-Score| 98.53% |
+| Precision| 98.63% |
+| Recall| 98.43% |
+
+
 ### Modified ADD-Net with ADASYN
 | Performance Metric | Obtained Result |
 | -------------- | -------------- | 
