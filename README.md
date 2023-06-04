@@ -30,11 +30,11 @@ To solve class imbalance, so far I have used the techniques: SMOTEENN, SMOTETome
 ## Adding Another Path to the Model
 - The original ADD-Net used filters of size 5x5 in its convolution blocks. Filters of this size are useful for extracting local features, but not the global ones. So in this modified version of the architecture, filters of size 12 x 12 are used along with that of size 5 x 5. 
 - To do so, another path parallel to the convolution blocks is created. 
-- This path has the same set of layers and hyperparameters except the filter size, which is 12x12. There are 4 convolution blocks, that is followed by a dropout layer similar to the ADD-Net. After the flatten layer, the output from the two branches is merged and fed to the flatten layer and thereafter, the fully connected layers.
+- This path has the same set of convolution layers except the filter size, which is 12x12. There are 4 convolution blocks, that is followed by a dropout layer similar to the ADD-Net. After the flatten layer, the output from the two branches is merged and fed to the flatten layer and thereafter, the fully connected layers.
 
 Here is a visualization with input shapes of the modified ADD-Net:
 
-![shared_input_layer](https://github.com/MarzukaaZaki/alzheimers-classification-ADDNet/assets/87608582/504894f5-3e8e-4105-9267-90ebcb60150c)
+![shared_input_layer](https://ibb.co/JFgMdFY)
 
 
 ## Evaluating Performance
@@ -52,7 +52,7 @@ Accuracy of the original ADD-Net is 98.6%.
 ### Modified ADD-Net with ADASYN
 | Performance Metric | Obtained Result |
 | -------------- | -------------- | 
-| Accuracy | 98.8%|
+| Accuracy | 99.4%|
 | AUC | 99.84% |
 | F1-Score| 98.73% |
 | Precision| 98.82% |
@@ -61,11 +61,11 @@ Accuracy of the original ADD-Net is 98.6%.
 ### Modified ADD-Net with SMOTEENN
 | Performance Metric | Obtained Result |
 | -------------- | -------------- | 
-| Accuracy | 98.86%|
-| AUC | 99.54% |
-| F1-Score| 98.87% |
-| Precision| 98.86% |
-| Recall| 98.86% |
+| Accuracy | 99.5%|
+| AUC | 99.93% |
+| F1-Score| 99.48% |
+| Precision| 98.50% |
+| Recall| 99.4% |
 
 ### Modified ADD-Net with BorderlineSMOTE
 | Performance Metric | Obtained Result |
