@@ -34,7 +34,7 @@ To solve class imbalance, so far I have used the techniques: SMOTEENN, SMOTETome
 
 Here is a visualization with input shapes of the modified ADD-Net:
 
-![shared_input_layer](https://ibb.co/JFgMdFY)
+![Proposed_Parallel_Deep_CNN](https://github.com/MarzukaaZaki/alzheimers-classification-modified-ADDNet/assets/87608582/f2064d03-a0ac-4cb2-a010-71f979a43a91)
 
 
 ## Evaluating Performance
